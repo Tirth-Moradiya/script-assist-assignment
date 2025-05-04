@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"scripts": {
-	 "build": "react-scripts build",
+		"build": "vite build",
 		"dev": "vite",
 		"preview": "vite preview"
 	},

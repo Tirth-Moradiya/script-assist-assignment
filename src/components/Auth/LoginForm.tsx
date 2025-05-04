@@ -39,7 +39,7 @@ export default function LoginForm() {
           Login
         </Title>
         <Text align="center" style={{ color: "#6c757d", marginBottom: "20px", fontSize: "1rem" }}>
-          Enter your email address to access the app
+          Enter your email address:admin@demo.com to access the app
         </Text>
 
         <TextInput

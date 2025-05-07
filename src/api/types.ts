@@ -1,4 +1,4 @@
-// API response types
+ 
 export interface User {
     id: number;
     name: string;
@@ -11,13 +11,13 @@ export interface User {
     success: boolean;
     flight_number: number;
     date_utc: string;
-    details?: string;  // Optional details field
+    details?: string;   
     links: {
       patch: {
         large?: string;
       };
     };
-    rocket?: string; // Add rocket property as a string (assuming it's an ID or reference to the rocket)
+    rocket?: string;  
   }
   
   export interface Rocket {

@@ -63,7 +63,7 @@ const ResourceDetail = () => {
           visible={isLoadingLaunch || isLoadingRocket}
           overlayBlur={2}
         />
-        {launch && <ResourceCard launch={launch} rocket={rocket || undefined} />} {/* Handle undefined for rocket */}
+        {launch && <ResourceCard launch={launch} rocket={rocket || undefined} />} { }
       </div>
     </Container>
   );

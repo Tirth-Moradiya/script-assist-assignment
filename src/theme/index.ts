@@ -1,18 +1,18 @@
 import { MantineThemeOverride } from '@mantine/core';
 
 export const theme: MantineThemeOverride = {
-  colorScheme: 'dark', // Dark mode for the whole app
+  colorScheme: 'dark',  
   colors: {
-    navy: ['#001f3d', '#003b6b', '#00529c', '#0069d1', '#007fff', '#4092c1', '#69a7c9', '#93c4d1', '#b7d4e1', '#c9e4f1'], // Navy shades for consistency
+    navy: ['#001f3d', '#003b6b', '#00529c', '#0069d1', '#007fff', '#4092c1', '#69a7c9', '#93c4d1', '#b7d4e1', '#c9e4f1'],  
   },
-  primaryColor: 'navy', // Set the primary color to navy
-  fontFamily: 'Arial, sans-serif', // Set a simple font for consistency
+  primaryColor: 'navy',  
+  fontFamily: 'Arial, sans-serif',  
 
-  // Default text color
+   
   white: '#ffffff',
   black: '#000000',
 
-  // Customize Button, Input, etc. globally
+   
   components: {
     Button: {
       styles: (theme) => ({
@@ -29,17 +29,17 @@ export const theme: MantineThemeOverride = {
     Paper: {
       styles: {
         root: {
-          backgroundColor: '#002b50', // Dark navy for paper/card components
-          color: '#e0e0e0', // Light text
+          backgroundColor: '#002b50',  
+          color: '#e0e0e0',  
         },
       },
     },
     TextInput: {
       styles: {
         input: {
-          backgroundColor: '#003b6b', // Navy input field
-          borderColor: '#00529c', // Lighter border color
-          color: '#ffffff', // Light text inside inputs
+          backgroundColor: '#003b6b',  
+          borderColor: '#00529c',  
+          color: '#ffffff',  
         },
       },
     },

@@ -1,4 +1,4 @@
-// App.jsx
+ 
 
 import { Routes, Route } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
@@ -19,7 +19,7 @@ function App() {
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <Notifications />
       <QueryClientProvider client={queryClient}>
-        {/* No BrowserRouter here, it's already in main.jsx */}
+        { }
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

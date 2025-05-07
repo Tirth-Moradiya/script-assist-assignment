@@ -21,11 +21,11 @@ const Dashboard = () => {
     },
   ];
 
-  // Media query hooks for responsive design
+   
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const isMediumScreen = useMediaQuery('(max-width: 900px)');
 
-  // Determine the number of columns based on screen size
+   
   const columns = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
 
   return (
@@ -33,7 +33,7 @@ const Dashboard = () => {
       direction="column"
       align="center"
       justify="center"
-      style={{ minHeight: '80vh' }} // Ensures the container takes full height of the screen
+      style={{ minHeight: '80vh' }}  
     >
       <Container size="xl" style={{ textAlign: 'center' }}>
         <Title order={1} mb="md">Dashboard</Title>

@@ -1,10 +1,13 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
-import "./styles/global.scss";
+// main.jsx
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'; // Only this one at the top level
+import App from './App';
+
+ReactDOM.render(
+  <BrowserRouter>  {/* Ensure BrowserRouter is here at the top level only */}
     <App />
-  </BrowserRouter>
+  </BrowserRouter>,
+  document.getElementById('root')
 );

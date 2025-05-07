@@ -1,9 +1,15 @@
 import { Group, Title, Button, Text } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
 
 const Header = () => {
   const { isAuthenticated, user, logout } = useAuthStore();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/'); // Redirect to Home page after logout
+  };
 
   return (
     <Group position="apart" p="md" bg="dark.7">
@@ -11,7 +17,7 @@ const Header = () => {
         <Title order={3} style={{ color: 'white' }}>
           <Link to="/">SpaceX Explorer</Link>
         </Title>
-        
+
         {isAuthenticated && (
           <Group ml="xl">
             <Button
@@ -21,7 +27,7 @@ const Header = () => {
               color="gray.2"
               sx={{
                 '&:hover': {
-                  color: 'blue', // Change text color on hover (example: blue)
+                  color: 'blue',
                 },
               }}
             >
@@ -34,7 +40,7 @@ const Header = () => {
               color="gray.2"
               sx={{
                 '&:hover': {
-                  color: 'blue', // Change text color on hover (example: blue)
+                  color: 'blue',
                 },
               }}
             >
@@ -43,17 +49,17 @@ const Header = () => {
           </Group>
         )}
       </Group>
-      
+
       {isAuthenticated ? (
         <Group>
           <Text style={{ color: 'white' }}>Welcome, {user?.name}</Text>
           <Button
             variant="outline"
             color="red"
-            onClick={logout}
+            onClick={handleLogout}
             sx={{
               '&:hover': {
-                color: 'darkred', // Change text color on hover (example: dark red)
+                color: 'darkred',
               },
             }}
           >
@@ -67,7 +73,7 @@ const Header = () => {
           variant="outline"
           sx={{
             '&:hover': {
-              color: 'blue', // Change text color on hover (example: blue)
+              color: 'blue',
             },
           }}
         >
